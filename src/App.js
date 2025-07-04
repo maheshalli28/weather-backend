@@ -13,8 +13,8 @@ function App() {
 
   const handleSearch = async () => {
     try {
-      const weatherRes = await axios.get(`https://weather-forcast-kn0n.onrender.com/weather?city=${city}`);
-      const forecastRes = await axios.get(`https://weather-forcast-kn0n.onrender.com/forecast?city=${city}`);
+      const weatherRes = await axios.get(`http://127.0.0.1:5000/weather?city=${city}`);
+      const forecastRes = await axios.get(`http://127.0.0.1:5000/forecast?city=${city}`);
       setWeatherData(weatherRes.data);
       setForecastData(forecastRes.data);
       setError("");
